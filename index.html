@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My professional portfolio for OJT and career opportunities.">
+    <title>My Portfolio | OJT Application</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="portfolio-locked">
+    <section id="landingScreen" class="landing-screen" role="status"
+             aria-label="Loading Dalzen Lorico's portfolio">
+        <div class="matrix-rain" aria-hidden="true">
+            <span>MY PORTFOLIO<br>MY SKILLS<br>WEB DEVELOPMENT<br>HTML + CSS<br>JAVASCRIPT<br>MY PROJECTS<br>KEEP LEARNING</span>
+            <span>MY SKILLS<br>DATABASES<br>MYSQL + SQL<br>NETWORKING<br>UI / UX DESIGN<br>MY PORTFOLIO</span>
+            <span>DALZEN LORICO<br>ASPIRING IT PROFESSIONAL<br>MY PROJECTS<br>WEB DEVELOPMENT<br>VIBE CODING<br>MY SKILLS</span>
+            <span>PORTFOLIO.EXE<br>LOADING SKILLS...<br>HTML<br>CSS<br>JAVASCRIPT<br>DATABASE MANAGEMENT</span>
+            <span>MY PORTFOLIO<br>CREATIVE IDEAS<br>PROBLEM SOLVING<br>CONTINUOUS LEARNING<br>MY PROJECTS</span>
+            <span>NETWORKING<br>DATABASES<br>MYSQL<br>SQL<br>WEB DESIGN<br>MY SKILLS</span>
+            <span>BUILDING PROJECTS<br>LEARNING EVERY DAY<br>UI / UX<br>FIGMA<br>CANVA<br>VIBE CODING</span>
+            <span>CODE<br>CREATE<br>LEARN<br>REPEAT<br>MY PORTFOLIO<br>MY SKILLS</span>
+            <span>ASPIRING IT PROFESSIONAL<br>WEB DEVELOPMENT<br>HTML + CSS<br>JAVASCRIPT<br>MY PROJECTS</span>
+            <span>DATABASE TECHNOLOGY<br>MYSQL + SQL<br>NETWORKING<br>PROBLEM SOLVING<br>KEEP LEARNING</span>
+            <span>MY PORTFOLIO<br>MY JOURNEY<br>MY SKILLS<br>MY PROJECTS<br>FUTURE DEVELOPER</span>
+            <span>DESIGN<br>DEVELOP<br>DEBUG<br>IMPROVE<br>VIBE CODING<br>BUILDING THE FUTURE</span>
+            <span>CONTINUOUS LEARNING<br>WEB DESIGN<br>FIGMA + CANVA<br>UI / UX DESIGN<br>MY PORTFOLIO</span>
+            <span>DALZEN LORICO<br>INFORMATION TECHNOLOGY<br>MY PROJECTS<br>MY SKILLS<br>CODE MODE</span>
+            <span>HTML<br>CSS<br>JAVA<br>BOOTSTRAP<br>MYSQL<br>LEARNING IN PROGRESS</span>
+            <span>MY PORTFOLIO<br>IDEAS INTO REALITY<br>NETWORKING<br>DATABASES<br>NEVER STOP LEARNING</span>
+            <span>010010<br>MY SKILLS<br>WEB DEVELOPMENT<br>010101<br>MY PROJECTS<br>HTML + CSS</span>
+            <span>101101<br>JAVASCRIPT<br>MY PORTFOLIO<br>DATABASES<br>010110<br>NETWORKING</span>
+            <span>001011<br>DALZEN LORICO<br>UI / UX DESIGN<br>VIBE CODING<br>111010</span>
+            <span>111001<br>MYSQL + SQL<br>LEARNING IN PROGRESS<br>010011<br>MY SKILLS</span>
+            <span>010101<br>MY PROJECTS<br>FIGMA + CANVA<br>WEB DESIGN<br>101010</span>
+            <span>101010<br>CODE CREATE LEARN<br>INFORMATION TECHNOLOGY<br>001100<br>PORTFOLIO</span>
+            <span>001101<br>HTML CSS JAVA<br>PROBLEM SOLVING<br>MY JOURNEY<br>110010</span>
+            <span>110100<br>DATABASE MANAGEMENT<br>NETWORKING<br>KEEP LEARNING<br>010101</span>
+        </div>
+        <div class="landing-content">
+            <p class="landing-eyebrow">SYSTEM INITIALIZING</p>
+            <h1 class="falling-title" aria-label="Dalzen Lorico Portfolio">
+                <span class="falling-word">
+                    <span>D</span><span>A</span><span>L</span><span>Z</span><span>E</span><span>N</span>
+                </span>
+                <span class="falling-word">
+                    <span>L</span><span>O</span><span>R</span><span>I</span><span>C</span><span>O</span>
+                </span>
+                <span class="falling-word">
+                    <span>P</span><span>O</span><span>R</span><span>T</span><span>F</span><span>O</span><span>L</span><span>I</span><span>O</span>
+                </span>
+            </h1>
+            <div class="loader-track" aria-hidden="true">
+                <span></span>
+            </div>
+            <p class="landing-status">LOADING PORTFOLIO<span class="loading-dots" aria-hidden="true">...</span></p>
+        </div>
+    </section>
+
+    <div class="background-marquee" aria-hidden="true">
+        <div class="background-marquee-track">
+            <span>MY PORTFOLIO&nbsp; · &nbsp;MY PORTFOLIO&nbsp; · &nbsp;</span>
+            <span>MY PORTFOLIO&nbsp; · &nbsp;MY PORTFOLIO&nbsp; · &nbsp;</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header id="siteHeader" inert>
+        <nav class="navbar container">
+            <a href="#home" class="logo">MyPortfolio<span>.</span></a>
+
+            <button class="menu-toggle" id="menu-toggle"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="theme-switch-item">
+                    <button id="themeToggle" class="theme-toggle" type="button"
+                            role="switch" aria-checked="false"
+                            aria-label="Dark mode">
+                        <span class="theme-switch-track" aria-hidden="true">
+                            <span id="themeToggleKnob" class="theme-toggle-knob">
+                                <span id="themeIcon">☀️</span>
+                            </span>
+                        </span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="siteMain" inert>
+        <!-- Home / Introduction -->
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <p class="eyebrow">ASPIRING IT PROFESSIONAL</p>
+
+                    <h1>Hello, I'm <span>Dalzen M. Lorico</span></h1>
+
+                    <h2>Bachelor of Science in Information Technology</h2>
+
+                    <p>
+                        I am a motivated student passionate about technology,
+                        problem-solving, and continuous learning. I am looking
+                        forward to applying my knowledge and developing my
+                        professional skills through an OJT opportunity.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            View My Projects
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img
+                        src="profile_image/83ac19c6-3bfb-47c7-8f08-11af3f52a06c.jpg"
+                        alt="Dalzen wearing a white shirt"
+                        class="profile-photo profile-photo-primary"
+                    >
+                    <img
+                        src="profile_image/shared%20image.jpg"
+                        alt="Dalzen wearing a black shirt"
+                        class="profile-photo profile-photo-hover"
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me -->
+        <section id="about" class="section">
+            <div class="container">
+                <p class="eyebrow">GET TO KNOW ME</p>
+                <h2 class="section-title">About Me</h2>
+
+                <div class="about-content">
+                    <div>
+                        <p>
+                            Hello! My name is <strong>Dalzen M. Lorico</strong>,
+                            and I am currently taking
+                            <strong>Bachelor of Science in Information Technology</strong> at
+                            <strong>University of Negros Occidental Recoletos</strong>.
+                        </p>
+
+                        <p>
+                            I am interested in web development, networking, cybersecurity, database, and raphic design.
+                            Through my academic experiences and personal
+                            projects, I have developed skills in
+                            SQL and HTML for web design.
+                        </p>
+
+                        <p>
+                            My goal is to gain practical experience, learn
+                            from industry professionals, and contribute
+                            positively to the organization where I complete
+                            my OJT.
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Personal Information</h3>
+                        <p><strong>Program:</strong> Bachelor of Science in Information Technology</p>
+                        <p><strong>School:</strong> University of Negros Occidental Recoletos</p>
+                        <p><strong>Year Level:</strong> 4th Year</p>
+                        <p><strong>Career Goal:</strong> Improvement of my Skills</p>
+                        <p><strong>Location:</strong> Bago City Negros Occidental</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section id="skills" class="section section-light">
+            <div class="container">
+                <p class="eyebrow">CURRENTLY LEARNING</p>
+                <h2 class="section-title">Technical Skills</h2>
+
+                <p class="section-description">
+                    I am actively learning and improving these skills through
+                    my studies and personal projects.
+                </p>
+
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <div class="skill-icon">⌨</div>
+                        <h3>Programming Languages</h3>
+                        <p>Currently learning: HTML, CSS, Bootstrap, and Java.(AI-assisted development)</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon">▣</div>
+                        <h3>Software & Tools</h3>
+                        <p>Currently learning: VS Code, Figma, Canva, and vibe coding (AI-assisted development).</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon">▤</div>
+                        <h3>Database Technologies</h3>
+                        <p>Currently learning: MySQL, SQL, and database fundamentals.</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon">✦</div>
+                        <h3>Other Technical Skills</h3>
+                        <p>Currently learning: database management, networking, and UI/UX.</p>
+                    </article>
+                </div>
+
+                <p class="small-note">
+                    All skills listed are in progress as I continue to build
+                    my knowledge and hands-on experience.
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section">
+            <div class="container">
+                <p class="eyebrow">MY WORK</p>
+                <h2 class="section-title">Projects</h2>
+
+                <p class="section-description">
+                    Academic and personal projects that demonstrate
+                    my technical and creative abilities.
+                </p>
+
+                <div class="projects-grid">
+
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <img
+                            src="images/project1.png"
+                            alt="Screenshot of Project 1"
+                            class="project-image"
+                            onerror="this.style.display='none'"
+                        >
+
+                        <div class="project-content">
+                            <span class="tag">Academic Capstone</span>
+                            <h3>Solar Orchard Sense</h3>
+
+                            <p>
+                                Solar Orchard Sense is an IoT-based orchard monitoring system designed to help monitor orchard conditions using connected sensors, a microcontroller, and a web-based dashboard.
+                            </p>
+
+                            <p><strong>My Role:</strong>Web Developer, IOT Developer, System Integrator</p>
+                            <p><strong>Tools Used:</strong>ESP32, DHT22, Soil Moisture Sensor, Soil PH Sensor, C++ , MySQL, JavaScript, HTML, CSS</p>
+
+                            <div class="project-links">
+                                <a href="https://solarorchard.infinityfree.me"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                    Visit Site↗
+                                </a>
+                                 
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <img
+                            src="images/project1.png"
+                            alt="Screenshot of Project 1"
+                            class="project-image"
+                            onerror="this.style.display='none'"
+                        >
+
+                        <div class="project-content">
+                            <span class="tag">Academic Project</span>
+                            <h3>Parent Guide</h3>
+
+                            <p>
+                                The Parent Guide mobile application is a comprehensive digital platform designed to provide parents and caregivers with accessible childcare resources, health education, and practical daily organizational tools.
+                            </p>
+
+                            <p><strong>My Role:</strong>Web Developer, UI/UX Designer</p>
+                            <p><strong>Tools Used:</strong>HTML, CSS, JavaScript</p>
+
+                            <div class="project-links">
+                                <a href="pg.html"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                    Visit Site↗
+                                </a>
+                                 
+                                </a>
+                            </div>
+                        </div>
+
+                    </article>
+                    
+
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <img
+                            src="images/project2.png"
+                            alt="Screenshot of Project 2"
+                            class="project-image"
+                            onerror="this.style.display='none'"
+                        >
+
+                        <div class="project-content">
+                            <span class="tag">Personal Project</span>
+                            <h3>Book Library App</h3>
+
+                            <p>
+                                A responsive web application for managing a personal book library, allowing users to add, view, and track their reading progress.
+                            </p>
+
+                            <p><strong>My Role:</strong> Full Stack Developer</p>
+                            <p><strong>Tools Used:</strong> HTML, CSS, JavaScript, IndexedDB</p>
+
+                            <div class="project-links">
+                                <a href="books/book.html"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                    Visit Site↗
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Duplicate a project-card to add more projects -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications and Achievements -->
+        <section id="achievements" class="section section-light">
+            <div class="container">
+                <p class="eyebrow">MY MILESTONES</p>
+                <h2 class="section-title">Certifications & Achievements</h2>
+
+                <p class="section-description">
+                    Academic milestones I have earned throughout my studies.
+                </p>
+
+                <button id="openAchievementDialog" class="btn btn-primary"
+                        type="button">
+                    View My Achievements
+                </button>
+            </div>
+        </section>
+
+        <dialog id="achievementDialog" class="achievement-dialog"
+                aria-labelledby="achievementDialogHeading">
+            <div class="achievement-dialog-content">
+                <button id="closeAchievementDialog" class="achievement-dialog-close"
+                        type="button" aria-label="Close achievements">×</button>
+                <div class="achievement-dialog-heading">
+                    <p class="eyebrow">MY MILESTONES</p>
+                    <h2 id="achievementDialogHeading">Academic Achievements</h2>
+                    <p>Academic recognition earned throughout my studies.</p>
+                </div>
+                <div class="achievement-details">
+                    <div id="achievementItems"></div>
+                    <p id="noAchievementsMessage" class="no-achievements-message" hidden>
+                        No achievements yet. Add one to get started.
+                    </p>
+                </div>
+                <button id="showAchievementForm" class="btn btn-primary"
+                        type="button">+ Add Achievement</button>
+                <form id="achievementForm" class="achievement-form" hidden>
+                    <label for="achievementTitleInput">Achievement title</label>
+                    <input id="achievementTitleInput" name="title" type="text"
+                           maxlength="120" required>
+                    <label for="achievementDescriptionInput">Details</label>
+                    <textarea id="achievementDescriptionInput" name="description"
+                              rows="3" maxlength="500" required></textarea>
+                    <label for="achievementImageInput">Image (optional)</label>
+                    <input id="achievementImageInput" name="image" type="file"
+                           accept="image/*">
+                    <div class="achievement-form-actions">
+                        <button id="cancelAchievementForm" class="btn btn-outline"
+                                type="button">Cancel</button>
+                        <button class="btn btn-primary" type="submit">Save Achievement</button>
+                    </div>
+                </form>
+            </div>
+        </dialog>
+
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <div class="container contact-container">
+                <p class="eyebrow">LET'S CONNECT</p>
+                <h2 class="section-title">Contact Me</h2>
+
+                <p class="section-description">
+                    I am open to OJT opportunities where I can learn,
+                    contribute, and grow professionally.
+                </p>
+
+                <div class="contact-card">
+                    <p>
+                        <strong>Email:</strong>
+                        <a href="mailto:yourname@example.com">
+                            dalzelorico1212@gmail.com
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>LinkedIn:</strong>
+                        <a href="https://www.linkedin.com/in/YOUR-PROFILE"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View LinkedIn Profile ↗
+                        </a>
+                    </p>
+
+                    <p>
+                        <strong>GitHub:</strong>
+                        <a href="https://github.com/YOUR-USERNAME"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View GitHub Profile ↗
+                        </a>
+                    </p>
+
+                    <p><strong>Location:</strong>Bago City, Negros Occidental</p>
+
+                    <a href="mailto:dalzelorico1212@gmail.com"
+                       class="btn btn-primary">
+                        Send Me an Email
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="siteFooter" inert>
+        <div class="container footer-content">
+            <p>
+                © <span id="year"></span> Dalzen Lorico.
+                All rights reserved.
+            </p>
+            <a href="#home">Back to Top ↑</a>
+        </div>
+    </footer>
+
+</body>
+</html>
