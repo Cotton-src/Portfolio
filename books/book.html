@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Reading Room</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">📚 My Reading Room</div>
+    <button id="addBookBtn" class="primary-button">+ Add a PDF</button>
+  </header>
+
+  <dialog id="addBookDialog" class="add-book-dialog">
+    <form id="addBookForm">
+      <h2>Add a book</h2>
+      <label for="pdfInput">PDF file</label>
+      <input id="pdfInput" type="file" accept="application/pdf,.pdf" required>
+      <label for="bookTitleInput">Book title</label>
+      <input id="bookTitleInput" type="text" required>
+      <label for="coverImageInput">Cover image (optional)</label>
+      <input id="coverImageInput" type="file" accept="image/*">
+      <div class="dialog-actions">
+        <button id="cancelAddBookBtn" class="secondary-button" type="button">Cancel</button>
+        <button class="primary-button" type="submit">Add book</button>
+      </div>
+    </form>
+  </dialog>
+
+  <main class="container">
+    <section class="welcome">
+      <div>
+        <p class="eyebrow">YOUR PERSONAL LIBRARY</p>
+        <h1>A little reading goes a long way.</h1>
+        <p>Keep your books organized and continue where you left off.</p>
+      </div>
+      <div class="welcome-icon">📖</div>
+    </section>
+
+    <section class="stats">
+      <article class="stat-card">
+        <span>Books in library</span>
+        <strong id="bookCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>Completed sessions</span>
+        <strong id="sessionCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <span>Total reading time</span>
+        <strong id="readingTime">0 min</strong>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <h2>My Books</h2>
+          <p>Your collection, all in one place.</p>
+        </div>
+        <input id="searchInput" class="search" type="search"
+          placeholder="Search books...">
+      </div>
+      <div id="bookGrid" class="book-grid"></div>
+      <p id="emptyLibrary" class="empty-state">
+        Your library is empty. Select “Add a PDF” to add your first book.
+      </p>
+    </section>
+
+    <section id="readerSection" class="section reader-section" hidden>
+      <div class="section-heading">
+        <div>
+          <h2 id="readerTitle">PDF Reader</h2>
+          <p id="readerStatus">Ready to read</p>
+        </div>
+        <button id="closeReaderBtn" class="secondary-button">Close reader</button>
+      </div>
+
+      <div class="reader-toolbar">
+        <button id="prevPageBtn" class="secondary-button">← Previous</button>
+        <span>Page <strong id="currentPage">1</strong> of
+          <strong id="totalPages">1</strong></span>
+        <button id="nextPageBtn" class="secondary-button">Next →</button>
+      </div>
+
+      <div class="pdf-container">
+        <canvas id="pdfCanvas"></canvas>
+      </div>
+
+      <div class="reader-toolbar">
+        <button id="prevPageBtnBottom" class="secondary-button">← Previous</button>
+        <span>Page <strong id="currentPageBottom">1</strong> of
+          <strong id="totalPagesBottom">1</strong></span>
+        <button id="nextPageBtnBottom" class="secondary-button">Next →</button>
+      </div>
+
+      <div class="reader-actions">
+        <button id="startSessionBtn" class="primary-button">Start session</button>
+        <button id="endSessionBtn" class="secondary-button" disabled>
+          End session
+        </button>
+        <span id="sessionMessage">Start a session to track your reading time.</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <h2>Recommended for You</h2>
+          <p>Suggestions based on titles in your library.</p>
+        </div>
+      </div>
+      <div id="recommendations" class="recommendation-list"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <h2>Reading History</h2>
+          <p>See when you read and how long each session lasted.</p>
+        </div>
+        <button id="exportBtn" class="secondary-button">Export backup</button>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Book</th>
+              <th>Started</th>
+              <th>Ended</th>
+              <th>Duration</th>
+              <th>Page</th>
+            </tr>
+          </thead>
+          <tbody id="historyBody"></tbody>
+        </table>
+      </div>
+      <p id="emptyHistory" class="empty-state">Your reading sessions will appear here.</p>
+    </section>
+
+    <section class="section data-section">
+      <h2>Library Backup</h2>
+      <p>
+        Export your book details and reading history as a JSON file.
+        The backup does not contain the PDF files themselves.
+      </p>
+      <label class="secondary-button import-label" for="importInput">
+        Import backup
+      </label>
+      <input id="importInput" type="file" accept=".json,application/json" hidden>
+      <p id="backupMessage" class="small-message"></p>
+    </section>
+
+    <footer>
+      <p>My Reading Room · A private space for your reading journey.</p>
+    </footer>
+  </main>
+</body>
+</html>
